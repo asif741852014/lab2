@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Exploring Workflow Dispatch Trigger"
-      - uses: .github/Workflows/reuse.yml
+      - uses: .github/workflows/reuse.yml
