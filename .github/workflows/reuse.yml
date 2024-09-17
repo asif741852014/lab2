@@ -5,8 +5,13 @@ jobs:
     usage:
         name: reuse job
         runs-on: ubuntu-latest
+        outputs:
+            name:
+                description: name1
+                value: ${{ steps.checking.outputs.name }}
         steps:
         - uses: actions/checkout@v4
         - run: ls -lrth .github/workflows
-        - run: echo "name=asif" >> $GITHUB_ENV
-        - run: echo "hello world my name is $name"
+        - name: h1
+          id: checking
+          run: echo "::set-output name=name::asif"
