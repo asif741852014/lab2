@@ -6,7 +6,7 @@ jobs:
         name: reuse job
         runs-on: ubuntu-latest
         steps:
+        - name: Checkout code  # Check out the repository to access reusable workflow files
+          uses: actions/checkout@v3
         - name: kilo
-          run: echo "name=asif" >> GITHUB_ENV
-        - name: checking
-          run: echo "my name is $name"
+          run: ls -R .github/workflows
