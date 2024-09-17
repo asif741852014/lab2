@@ -8,5 +8,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code  # Check out the repository to access reusable workflow files
+        uses: actions/checkout@v3
       - run: echo "Exploring Workflow Dispatch Trigger"
       - uses: ./.github/workflows/reuse.yml
