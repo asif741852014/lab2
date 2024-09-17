@@ -2,6 +2,10 @@ name: Reusable workflow
 
 on:
   workflow_call:
+    inputs:
+      demo:
+        required: true
+        type: string
     # Map the workflow outputs to job outputs
     outputs:
       firstword:
@@ -24,3 +28,4 @@ jobs:
         run: echo "firstword=hello" >> $GITHUB_OUTPUT
       - id: step2
         run: echo "secondword=world" >> $GITHUB_OUTPUT
+      - run: echo take a input ${{ inputs.demo }}
