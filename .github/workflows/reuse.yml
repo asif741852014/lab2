@@ -2,12 +2,11 @@ name: abc
 on:
     workflow_call: 
 jobs:
-    usage:
+    job1:
         name: reuse job
         runs-on: ubuntu-latest
         outputs:
             name:
-                description: name1
                 value: ${{ steps.checking.outputs.name }}
         steps:
         - uses: actions/checkout@v4
