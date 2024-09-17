@@ -1,0 +1,12 @@
+name: abc
+on:
+    workflow_call: 
+jobs:
+    usage:
+        name: reuse job
+        runs-on: ubuntu-latest
+        steps:
+        - name: kilo
+          run: echo "name=asif" >> GITHUB_ENV
+        - name: checking
+          run: echo "my name is $name"

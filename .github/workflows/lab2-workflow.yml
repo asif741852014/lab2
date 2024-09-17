@@ -2,9 +2,11 @@ name: Exploring Workflow Dispatch Trigger
 
 on:
   workflow_dispatch:
+  push: 
 
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Exploring Workflow Dispatch Trigger"
+      - uses: .github/Workflows/reuse.yml
