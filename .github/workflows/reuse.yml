@@ -8,4 +8,5 @@ jobs:
         steps:
         - uses: actions/checkout@v4
         - run: ls -lrth .github/workflows
-        - run: echo "hello world"
+        - run: echo "name=asif" >> GITHUB_ENV
+        - run: echo "hello world my name is $name"
