@@ -5,4 +5,4 @@ on:
 
 jobs:
   job1:
-    uses: .github/workflows/reuse.yml
+    uses: ./.github/workflows/reuse.yml
