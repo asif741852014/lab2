@@ -2,7 +2,6 @@ name: Exploring Workflow Dispatch Trigger
 
 on:
   push: 
-
 jobs:
   job1:
     uses: ./.github/workflows/reuse.yml
